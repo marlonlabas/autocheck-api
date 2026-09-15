@@ -1,5 +1,6 @@
 <Solution>
   <Folder Name="/src/">
+    <Project Path="src/AutoCheck.Api/AutoCheck.Api.csproj" />
     <Project Path="src/AutoCheck.ConsoleApp/AutoCheck.ConsoleApp.csproj" />
     <Project Path="src/AutoCheck.Domain/AutoCheck.Domain.csproj" />
   </Folder>
