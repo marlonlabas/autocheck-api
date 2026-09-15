@@ -2,6 +2,7 @@ namespace AutoCheck.Domain
 {
     public class ItemVistoria
     {
+        public int Id { get; set; }
         public string Nome { get; set; }
 
         private string _status;
