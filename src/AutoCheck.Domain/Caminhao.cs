@@ -6,7 +6,7 @@ namespace AutoCheck.Domain
     {
         public int QuantidadeEixos { get; set; }
         public double CapacidadeCargaToneladas { get; set; }
-        public Caminhao(string marca, string modelo, int ano, double quilomentragem, int quantidadeEixos, double capacidadeCargaToneladas) : base(marca, modelo, ano, quilomentragem)
+        public Caminhao(string marca, string modelo, int ano, double quilometragem, int quantidadeEixos, double capacidadeCargaToneladas) : base(marca, modelo, ano, quilometragem)
         {
             this.QuantidadeEixos = quantidadeEixos;
             this.CapacidadeCargaToneladas = capacidadeCargaToneladas;
