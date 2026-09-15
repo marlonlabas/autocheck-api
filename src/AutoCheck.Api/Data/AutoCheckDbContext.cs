@@ -7,10 +7,11 @@ namespace AutoCheck.Api.Data
     {
         public AutoCheckDbContext(DbContextOptions<AutoCheckDbContext> options) : base(options)
         {
-            public DbSet<Veiculo> Veiculos { get; set; }
-            public DbSet<ItemVistoria> ItemVistorias { get; set; }
+        }
+        public DbSet<Veiculo> Veiculos { get; set; }
+        public DbSet<ItemVistoria> ItemVistorias { get; set; }
 
-            protected override void OnModelCreating(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Veiculo>()
                 .HasDiscriminator<string>("TipoVeiculo")
@@ -19,6 +20,6 @@ namespace AutoCheck.Api.Data
                 .HasValue<Moto>("Moto")
                 .HasValue<Caminhao>("Caminhao");
         }
-        
     }
+
 }
