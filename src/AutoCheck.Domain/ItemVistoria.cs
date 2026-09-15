@@ -5,7 +5,8 @@ namespace AutoCheck.Domain
         public int Id { get; set; }
         public string Nome { get; set; }
 
-        private string _status;
+        private string _status = string.Empty;
+
         public string Status
         {
             get { return _status; }
@@ -18,7 +19,6 @@ namespace AutoCheck.Domain
                 _status = value;
             }
         }
-
     public ItemVistoria(string nome, string status)
         {
             Nome = nome;

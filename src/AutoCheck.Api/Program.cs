@@ -1,7 +1,10 @@
 using AutoCheck.Api.Data;
+using AutoCheck.Api.Interfaces;
+using AutoCheck.Api.Repositories;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddScoped<IVeiculosRepository, VeiculoRepository>();
 
 builder.Services.AddDbContext<AutoCheckDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
